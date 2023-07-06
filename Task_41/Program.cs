@@ -2,60 +2,34 @@
 //Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
-
-/*
-int[] CreateArray(int size, int min, int max)
+Console.Clear();
+Console.WriteLine($"Введите размер массива: ");
+int M = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine($"Заполните массив целыми числами: ");
+int[] array = new int[M];
+for (int i = 0; i < M; i++)
 {
-    int[] array = new int[size];
-    Random rand = new Random();
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = rand.Next(min, max);
-    }
-    Console.WriteLine($"Our array [{string.Join(", ", array)}]");
-    return array;
+    array[i] = Convert.ToInt32(Console.ReadLine());
 }
-*/
-/*
-Console.WriteLine($"Заполните массив целыми числами");
-int[] CreateArray(int size, int min, int max);
-int number = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Our array [{string.Join(", ", array)}]");
+Console.WriteLine($"Введен массив из {M} чисел: [{string.Join(", ", array)}]");
 
-Console.Write("Заполните массив целыми числами => ");
-//int N1 = Convert.ToInt32(Console.ReadLine());
-
-//Console.WriteLine("[{0}]", string.Join("\n", array));
-//array.ToList().ForEach(i => Console.WriteLine(i.ToString()));
-*/
-/*
 int GetCountPositivNumOfArray(int[] array)
 {
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-
         if (array[i] > 0)
         {
             count++;
         }
-        return count;
     }
+    return count;
 }
-int[] arr = CreateArray(20, -5, 10);
-
 int count = GetCountPositivNumOfArray(array);
-Console.WriteLine($"Count of positiv numbers: {count}");
-*/
+Console.WriteLine($"Количество положительных чисел массива: {count}");
+
+////Заполнение случайными числами массива
 /*
-void CreateArray()
-{
-    Console.WriteLine($"Заполните массив целыми числами");
-    int[] array = { };
-    Console.Write($"Our array [{string.Join(", ", array)}]");
-    
-}
-*/
 int[] CreateArray(int size, int min, int max)
 {
     int[] array = new int[size];
@@ -81,10 +55,8 @@ int GetCountPositivNumOfArray(int[] array)
     }
     return count;
 }
-int[] arr = CreateArray(10, -5, 5);
+int[] arr = CreateArray(10, -5, 25);
 
 int count = GetCountPositivNumOfArray(arr);
-Console.WriteLine($"Количество положительных чисел массива = {count}");
-
-
-
+Console.WriteLine($"Количество положительных чисел массива: {count}");
+*/
